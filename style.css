@@ -1,0 +1,125 @@
+body {
+  position: relative;
+  background: hsl(0, 0%, 100%);
+  text-align: center;
+  color: black;
+  
+}
+
+.gif-container {
+  position: absolute;
+  top: -150px; /* Position above text */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 1s ease;
+  margin-bottom: 50px;
+  
+}
+
+.valentine-gif {
+  width: 220px;
+  height: auto;
+  filter: drop-shadow(0 0 15px #ff69b4);
+}
+
+.content.visible .gif-container {
+  opacity: 1;
+}
+
+
+
+
+
+.valentine-gif {
+  animation: float 3s ease-in-out infinite;
+}
+
+
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+  z-index: 3; /* Higher than canvas */
+}
+
+
+/* Show class for later */
+.content.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ensure canvas starts fully visible */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  background: transparent; 
+}
+
+#header {
+  margin-top: 120px;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+#yesButton {
+  transition: all 0.5s ease;
+}
+
+#yesButton:hover {
+  transform: scale(1.1);
+  background-color: #ff69b4;
+}
+
+/* Existing canvas styles */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Keep canvas below content */
+}
+html, body {
+  overflow: hidden;
+}
+
+
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  background: #ff3366;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+
+.button_top {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #ff1a53;
+}

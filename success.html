@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+      </audio>
+
+    <script>
+        const audio = document.getElementById('myAudio');
+        audio.volume = 0.5; // Sets volume to 50%
+    </script>
+
+   <section class="love-message">
+    <h1>Thank you my LOVE!!!!</h1>
+    <h1 id="yay">I LOVE YOU 💓</h1>
+    <h1>HAPPY VALENTINES DAY!!!!!!!</h1>
+    <h1>K 💗 C</h1>
+
+</section>
+
+<div class="plan">
+    <img src="Theplan.png">
+</div>
+
+<style>
+
+#yay{
+    color: rgb(248, 17, 17);
+}
+
+.plan{
+    animation: fadeIn 1.5s ease-out;
+}
+
+#ilove{
+        color: red;
+    }
+
+    body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    font-family: 'Great Vibes', cursive;
+    overflow: hidden;
+}
+
+
+
+.love-message {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(255, 65, 108, 0.3);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.love-message h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.love-message h1::after {
+    
+    position: absolute;
+    right: -40px;
+    top: -20px;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+/* Floating hearts background */
+.heart {
+    position: absolute;
+    color: #ff3860;
+    animation: floatUp 10s linear infinite;
+    opacity: 0;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-100vh);
+        opacity: 1;
+}
+}
+</style>
+
+</body>
+</html>
